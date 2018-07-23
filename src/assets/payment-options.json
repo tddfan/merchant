@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "name": "Credit/Debit Card",
+    "description": ""
+  },
+  {
+    "id": "2",
+    "name": "Xpress Pay - (powered by Natwest)",
+    "description": "Offers/Cashback"
+  },
+  {
+    "id": "3",
+    "name": "Paypal",
+    "description": ""
+  }
+]

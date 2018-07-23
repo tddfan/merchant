@@ -1,0 +1,80 @@
+<div class="row">
+  <div class="small-12 columns">
+    <h5>
+      <i class="material-icons">shopping_basket</i>
+      <span>Payment</span>
+    </h5>
+  </div>
+  <div class="small-6 columns">
+    <h6>
+      Items Cost
+    </h6>
+  </div>
+  <div class="small-6 columns">
+    <h6>
+      <span class="text--red text--bold js-gross-total">{{(cart | async).itemsTotal | currency:'GBP':true}}</span>
+    </h6>
+  </div>
+
+  <div class="small-6 columns">
+    <h6>
+      Delivery Cost
+    </h6>
+  </div>
+  <div class="small-6 columns">
+    <h6>
+      <span class="text--red text--bold js-gross-total">{{(cart | async).grossTotal | currency:'GBP':true}}</span>
+    </h6>
+  </div>
+
+  <div class="small-6 columns">
+    <h6>
+      <b>Total Cost</b>
+    </h6>
+  </div>
+  <div class="small-6 columns">
+    <h6>
+      <span class="text--red text--bold js-gross-total">{{(cart | async).grossTotal | currency:'GBP':true}}</span>
+    </h6>
+  </div>
+  <hr>
+
+
+
+
+  <div class="medium-4 columns">
+    <h5>Select Payment Options</h5>
+
+    <div class="row delivery-option"
+         *ngFor="let option of options | async">
+      <div class="small-2 columns">
+        <input type="radio"
+               name="delivery_option"
+               id="{{option.name}}"
+               (click)="setPaymentOption(option)">
+      </div>
+      <div class="small-10 columns">
+        <label class="text--bold js-option-name" for="{{option.name}}" (click)="setPaymentOption(option)">{{option.name}}</label>
+      </div>
+
+      <!--<div class="small-3 columns">-->
+        <!--<p>{{option.description}}</p>-->
+      <!--</div>-->
+    </div>
+  </div>
+
+  <div *ngIf="selectedOptionId=='1'">
+    <app-payment></app-payment>
+  </div>
+
+  <div *ngIf="selectedOptionId=='2'">
+    <app-xpress-pay></app-xpress-pay>
+  </div>
+
+  <div class="row">
+    <div class="small-10 columns small-centered">
+      <a class="warning button expanded"
+         routerLink="/">Return to Shopping</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "58552daa-30f6-46fa-a808-f1a1d7667561",
+    "price": 113.50,
+    "name": "Fire HD 8 Kids Edition Tablet, 8inch Display, 32 GB, Blue Kid-Proof Case",
+    "description": "by Amazon",
+    "ingredients": [ ]
+  },
+  {
+    "id": "bdcbe438-ac85-4acf-8949-5627fd5b57df",
+    "price": 222.75,
+    "name": "7 inch Tablet PC Android 6.0, Quad Core,1024x600, Dual Camera,",
+    "description": "iRULU",
+    "ingredients": [ ]
+  },
+  {
+    "id": "9aa113b4-1e4e-4cde-bf9d-8358fc78ea4f",
+    "price": 123.49,
+    "name": "Fire HD 8 Tablet with Alexa, 8inch HD Display, 16 GB, Black",
+    "description": "by Amazon",
+    "ingredients": [ ]
+  },
+  {
+    "id": "d4666802-fd84-476f-9eea-c8dd29cfb633",
+    "price": 199.99,
+    "name": "10.1 Inch Google Android Tablet 7.0 Quad Core Super Fast CPU",
+    "description": "by Samsung",
+    "ingredients": [ ]
+  },
+  {
+    "id": "7ef3b9dd-5a95-4415-af37-6871d6ff0262",
+    "price": 122.50,
+    "name": "Huawei MediaPad T3 10 inch Tablet(Grey) - (Qualcomm Quad-core 1.4GHz, RAM 2GB, ROM 16GB, IPS-Display)",
+    "description": "by Huawei",
+    "ingredients": [ ]
+  }
+]
