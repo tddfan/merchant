@@ -1,21 +1,36 @@
 import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Inject } from '@angular/core';
+import { ShoppingCartService } from "../../services/shopping-cart.service";
+import { Observable } from "rxjs/Observable";
+import { ShoppingCart } from "app/models/shopping-cart.model";
+import { Subscription } from "rxjs/Subscription";
 
 @Component({
   selector: 'app-xpress-pay',
   templateUrl: './xpress-pay.component.html',
   styleUrls: ['./xpress-pay.component.scss']
 })
-export class XpressPayComponent implements OnInit {
+export class XpressPayComponent {
 
-  public bank;
+  private cart: Observable<ShoppingCart>;
+  private cartSubscription: Subscription;
 
-  constructor() { }
 
-  ngOnInit() {
+  constructor(@Inject(DOCUMENT) private document: any,
+    private shoppingCartService: ShoppingCartService) {
+    this.cart = this.shoppingCartService.get();
+
   }
 
-  chooseBank(val) {
-    this.bank = val;
+   goToUrl(): void {
+    this.cart.subscribe(item=> {
+      console.log(item);
+      this.document.location.href = 'https://nwbfastpay.herokuapp.com?amount='
+      + btoa(''+item.grossTotal)
+      + '&merchant=' + btoa('amazon')
+      +'&id=' + btoa(''+Math.floor(Math.random() * 1000) + 1) ;
+    })
   }
 
 }

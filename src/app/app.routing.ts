@@ -5,6 +5,7 @@ import { CheckoutComponent } from "./components/checkout/checkout.component";
 import { OrderConfirmationComponent } from "./components/order-confirmation/order-confirmation.component";
 import { StoreFrontComponent } from "./components/store-front/store-front.component";
 import { PopulatedCartRouteGuard } from "./route-gaurds/populated-cart.route-gaurd";
+import { PaymentSuccessComponent } from './components/payment-success/payment-success.component';
 
 @NgModule({
     exports: [RouterModule],
@@ -19,6 +20,10 @@ import { PopulatedCartRouteGuard } from "./route-gaurds/populated-cart.route-gau
                 canActivate: [PopulatedCartRouteGuard],
                 component: OrderConfirmationComponent,
                 path: "confirmed"
+            },
+            {
+                component: PaymentSuccessComponent,
+                path: "message"
             },
             {
                 component: StoreFrontComponent,

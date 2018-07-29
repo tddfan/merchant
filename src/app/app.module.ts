@@ -17,6 +17,9 @@ import { LocalStorageServie, StorageService } from "./services/storage.service";
 import { PaymentComponent } from './components/payment/payment.component';
 import { PaymentOptionsDataService } from "app/services/payment-options.service";
 import { XpressPayComponent } from './components/xpress-pay/xpress-pay.component';
+import { PaymentSuccessComponent } from './components/payment-success/payment-success.component';
+
+
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -27,7 +30,8 @@ import { XpressPayComponent } from './components/xpress-pay/xpress-pay.component
     CheckoutComponent,
     OrderConfirmationComponent,
     PaymentComponent,
-    XpressPayComponent
+    XpressPayComponent,
+    PaymentSuccessComponent
   ],
   imports: [
     BrowserModule,
