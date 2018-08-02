@@ -1,2 +1,6 @@
 Expects following success params 
   /message?amount=10&merchantId=amazon&status=Success&merchantCustomerId=customer@rbs.com&endToEndIdentifier=3435543
+
+
+Sample
+message?transactionstate=YW1vdW50PTEwJm1lcmNoYW50SWQ9YW1hem9uJnN0YXR1cz1TdWNjZXNzJm1lcmNoYW50Q3VzdG9tZXJJZD1jdXN0b21lckByYnMuY29tJmVuZFRvRW5kSWRlbnRpZmllcj0zNDM1NTQz
