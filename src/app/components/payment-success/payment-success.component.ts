@@ -25,12 +25,27 @@ export class PaymentSuccessComponent implements OnInit {
   status :any;
   amount:any;
   merchant:any;
+  customer:any;
+  id:any;
+
+  url :any;
 
   ngOnInit() {
     this.activatedRoute.queryParams.subscribe((params: Params) => {
-        this.status = params['status'];
-        this.amount = params['amount'];
-        this.merchant = params['merchant'];
+        let urlSearchParam = atob(params['transactionstate']);
+        console.log(urlSearchParam);
+
+        this.url = new URL("http://a@a.com?" + urlSearchParam);
+
+        console.log(this.url);
+        console.log(this.url.searchParams.get('status'));
+
+        this.status = this.url.searchParams.get('status');
+        this.amount = this.url.searchParams.get('amount');
+        this.merchant = this.url.searchParams.get('merchantId');
+        this.customer = this.url.searchParams.get('merchantCustomerId');
+        this.id = this.url.searchParams.get('endToEndIdentifier');
+
       });
   }
 
