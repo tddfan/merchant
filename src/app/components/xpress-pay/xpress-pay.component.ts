@@ -26,10 +26,10 @@ export class XpressPayComponent {
    goToUrl(): void {
     this.cart.subscribe(item=> {
       console.log(item);
-      this.document.location.href = 'https://nwbfastpay.herokuapp.com?amount='
-      + btoa(''+item.grossTotal)
-      + '&merchant=' + btoa('amazon')
-      +'&id=' + btoa(''+Math.floor(Math.random() * 1000) + 1) ;
+
+      let request = btoa(' amount=' + item.grossTotal + '&merchantId=amazon' + '&merchantCustomerId=customer1@rbs.com' + '&endToEndIdentifier=' + (Math.floor(Math.random() * 1000) + 1));
+      console.log(request);
+      this.document.location.href = 'https://nwbfastpay.herokuapp.com?transactionstate=' + request;
     })
   }
 
