@@ -14,6 +14,20 @@
     "ingredients": [ ]
   },
   {
+    "id": "pen-1",
+    "price": 5.75,
+    "name": "Parker Pen",
+    "description": "Parker",
+    "ingredients": [ ]
+  },
+  {
+    "id": "pen-2",
+    "price": 15.75,
+    "name": "Rainbow Color Pen",
+    "description": "PenSeller",
+    "ingredients": [ ]
+  },
+  {
     "id": "9aa113b4-1e4e-4cde-bf9d-8358fc78ea4f",
     "price": 123.49,
     "name": "Fire HD 8 Tablet with Alexa, 8inch HD Display, 16 GB, Black",
